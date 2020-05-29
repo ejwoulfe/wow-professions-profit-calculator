@@ -1,0 +1,32 @@
+{
+  "name": "wow-professions-profit-calculator",
+  "version": "1.0.0",
+  "description": "Project that will help users calculate profitable crafts to sell in the MMORPG World of Warcraft.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejwoulfe/wow-professions-profit-calculator.git"
+  },
+  "keywords": [
+    "World",
+    "of",
+    "Warcraft",
+    "Professions",
+    "WoW",
+    "Profit"
+  ],
+  "author": "Edmond Woulfe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejwoulfe/wow-professions-profit-calculator/issues"
+  },
+  "homepage": "https://github.com/ejwoulfe/wow-professions-profit-calculator#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  }
+}
