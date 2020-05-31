@@ -1,28 +1,24 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
-const morgan = require('morgan');
-const mysql = require('mysql')
-app.use(morgan('short'));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+app.use(bodyParser.json())
 
 
 
-connection.connect(function (err) {
-    if (err) {
-        console.log("error here")
-        throw err
-
-    };
-    con.query("SELECT * FROM alchemy_recipes", function (err, result, fields) {
-        if (err) throw err;
-        console.log(result);
-        console.log("asdasdf")
-    });
+// localhost:3003
+app.listen(3003, () => {
+    console.log("Server is up and listening on 3003..")
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
 
+})
 
-connection.end()
-// // localhost:3003
-// app.listen(3003, () => {
-//     console.log("Server is up and listening on 3003..")
-// });
+app.get('/admin', (req, res) => {
+    res.sendFile(__dirname + '/admin/admin-page.html')
+
+})
